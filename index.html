@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hand Sign Recognizer</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Webcam.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 style="font-size: 2.5rem;">Hand Sign Recognizer <span id="hand-emoji">&#9995;</span></h1>
+        <ul class="hand-gestures-list">
+          <li>&#128076; OK Hand Sign</li>
+          <li>&#128077; Thumbs Up</li>
+          <li>&#9996; Peace Sign</li>
+          <!-- Add more hand gestures as needed -->
+        </ul>
+      </header>
+      <div id="webcam-view" class="webcam-container">
+        <!-- Webcam live view will be inserted here -->
+      </div>
+      <center>
+      <button id="capture-btn" onclick="captureImage()">Capture Image</button>
+    </center>
+      <div id="captured-image" class="captured-image-container">
+        <!-- Captured image will be inserted here -->
+      </div>
+      <center>
+      <button id="identify-btn" onclick="identifyImage()">Identify Image</button>
+    </center>
+      <div id="hand-gesture" class="hand-gesture-container">
+        <span id="gesture-name"></span>
+        <span id="gesture-icon"></span>
+      </div>
+</body>
+</html>
